@@ -1,0 +1,141 @@
+body {
+	background-color: white;
+	color: #616D60;
+	font-family: "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+
+#top-bar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 25px;
+	background:url('../images/top-bar.png') repeat-x;
+}
+
+.wrapper {
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    width: 960px;
+}
+
+#logo {
+	text-align: center;
+}
+	#logo img {
+		vertical-align: middle;
+	}
+
+#content form {
+	margin-top: 35px;
+}
+.box-area {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16),inner 0px 0px 85px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.16),inset 0px 0px 85px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16),inset 0px 0px 85px rgba(0, 0, 0, 0.1);
+}
+
+#ad-area {
+	height: 180px;
+	padding: 10px;
+	background-color: white;
+}
+.pinfo {
+	display: block;
+	background-color: white;
+	width: 290px;
+	height: 120px;
+	float: left;
+	margin-right: 20px;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+
+.pimg {
+	display:block;
+	float:left;
+	width: 145px;
+}
+
+.price {
+  padding-left: 10px;
+  float: left;
+  width: 135px;
+}
+
+p.ptitle {
+  font-weight: bolder;
+}
+
+h3 {
+height: 55px;
+display: block;
+position: relative;
+top: 25px;
+clear: both;
+}
+
+#footer {
+clear: both;
+height: 65px;
+}
+
+
+p {
+	text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+
+input[type=text] {
+	font-size: 16px;
+	color: #CCCCCC;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+	padding: 6px;
+	border: 1px solid #CCCCCC;
+	font-weight: bold;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16) inset;
+}
+
+	input[type=text]:hover {
+		box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.16) inset;
+	}
+
+	input[type=text]:focus {
+		color: #AEB2AF;
+		box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.16) inset, 0 0 10px rgba(106, 211, 74,0.3);
+	}
+	
+
+/* =============================================================================
+   Buttons
+   ========================================================================== */
+
+.fancy_button {
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+	padding: 6px;  
+	background-color: #83C44E; /* for fallback */
+	background-image: -moz-linear-gradient(center top , #A8DB7F, #98C570);
+	background: -webkit-gradient(linear, left top, left bottom, from(#A8DB7F), to(#98C570)); /* For WebKit (Safari, Google Chrome etc) */
+    border: 1px solid;    
+    border-color: transparent transparent rgba(124,173,82,0.27) transparent; 
+    -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;  
+    -webkit-background-clip: padding-box;
+	text-shadow: 0 -1px 0 #b0d9ad;
+	padding: 6px 10px
+}
+
+.fancy_button:hover {
+	color: #ffffff;
+	background-color: #79BF00; /* for fallback */
+	background-image: -moz-linear-gradient(center top , #79BF00, #479918);
+	box-shadow: 0 1px 2px rgba(72, 76, 80, 0.25);
+	text-shadow: 0 1px 0 #479918;
+    border-color: transparent transparent rgba(124,173,82,0.27) transparent; 
+}
