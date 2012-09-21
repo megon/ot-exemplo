@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <title>SiteExemplo</title>
@@ -13,10 +13,10 @@
 	  <div id="content">
 	    <a id="btn-help" href="#" class="fancy_button">Ajuda</a>
 	    <div id="logo">
-			<h1>SiteExemplo</h1>
+			<h1>Site-exemplo do OneTarget</h1>
 	    </div>
 		<div id="ad-area" class="box-area">
-			banner padrao enquanto nao houver perfil identificado.
+			<!-- aqui vai o banner com perfil do usuario -->
 		</div>
 		<div id="products-area">
 			<!-- Produtos Feminino -->
@@ -24,25 +24,25 @@
 			<div class="pinfo box-area">
 			  <img class="pimg" src="images/m-sapato1ok.png"></img>
 			  <div class="price">
-				<p class="ptitle">Tenis Asics</p>
+				<p class="ptitle">Sapato DG</p>
 				<p>R$ 135,00</p>
-			    <a href="pagina.html?cl=exemplo-sapato_exemplo-feminino" class="fancy_button">Mais info.</a>
+			    <a href="index.html?cl=f" class="fancy_button">Mais info.</a>
 			  </div>
 			</div>
 			<div class="pinfo box-area">
 			  <img class="pimg" src="images/m-sapato2ok.png"></img>
 			  <div class="price">
-				<p class="ptitle">Tenis Asics</p>
+				<p class="ptitle">Sapato Zara</p>
 				<p>R$ 135,00</p>
-			    <input class="fancy_button" id="enviar" name="commit" type="submit" value="Mais info.">
+			    <a href="index.html?cl=f" class="fancy_button">Mais info.</a>
 			  </div>
 			</div>
 			<div class="pinfo box-area">
 			  <img class="pimg" src="images/m-sapato3ok.png"></img>
 			  <div class="price">
-				<p class="ptitle">Tenis Asics</p>
+				<p class="ptitle">Sapato Esporte</p>
 				<p>R$ 135,00</p>
-			    <input class="fancy_button" id="enviar" name="commit" type="submit" value="Mais info.">
+			    <a href="index.html?cl=f" class="fancy_button">Mais info.</a>
 			  </div>
 			</div>
 
@@ -52,24 +52,24 @@
 			  <img class="pimg" src="images/h-tenis1ok.png"></img>
 			  <div class="price">
 				<p class="ptitle">Tenis Asics</p>
-				<p>R$ 135,00</p>
-			    <input class="fancy_button" id="enviar" name="commit" type="submit" value="Mais info.">
+				<p>R$ 200,00</p>
+			    <a href="index.html?cl=m" class="fancy_button">Mais info.</a>
 			  </div>
 			</div>
 			<div class="pinfo box-area">
 			  <img class="pimg" src="images/h-tenis2ok.png"></img>
 			  <div class="price">
-				<p class="ptitle">Tenis Asics</p>
-				<p>R$ 135,00</p>
-			    <input class="fancy_button" id="enviar" name="commit" type="submit" value="Mais info.">
+				<p class="ptitle">Tenis Nike</p>
+				<p>R$ 115,00</p>
+			    <a href="index.html?cl=m" class="fancy_button">Mais info.</a>
 			  </div>
 			</div>
 			<div class="pinfo box-area">
 			  <img class="pimg" src="images/h-tenis3ok.png"></img>
 			  <div class="price">
-				<p class="ptitle">Tenis Asics</p>
+				<p class="ptitle">Tenis NB</p>
 				<p>R$ 135,00</p>
-			    <input class="fancy_button" id="enviar" name="commit" type="submit" value="Mais info.">
+			    <a href="index.html?cl=m" class="fancy_button">Mais info.</a>
 			  </div>
 			</div>			
 		</div>
@@ -91,11 +91,24 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#modal-intro").modal();
 			$("#btn-help").on('click', function(){
 				$("#modal-intro").modal();
 			});
 		});
 	</script>
-  </body>
+
+	<script type="text/javascript"> 
+
+		OT.api.whenReady(popularBanner);
+		function popularBanner() {
+			if(OT.api.getRule(0)){
+				$('#ad-area').html('<img src="images/ad/banner-'+ OT.api.getRule(0) +'.gif" width="940px"></img>');
+			} else {
+				$('#ad-area').html('<img src="images/ad/banner-g.gif" width="940px"></img>');
+				$("#modal-intro").modal();
+			}
+		}
+	</script>
+
+	</body>
 </html>
