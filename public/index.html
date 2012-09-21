@@ -7,9 +7,11 @@
   </head>
   <body class="cl_exemplo-index">
     <script type="text/javascript" src="js/ot-min-exemplo-onetarget.js"></script>
+
     <div id="top-bar"/>
     <div id="main" class="wrapper">
 	  <div id="content">
+	    <a id="btn-help" href="#" class="fancy_button">Ajuda</a>
 	    <div id="logo">
 			<h1>SiteExemplo</h1>
 	    </div>
@@ -81,7 +83,7 @@
 		<p>Nesse exemplo mostraremos um banner no topo da página baseado na sua navegação pelos calçados femininos e masculinos.</p>
 		<p>Por exemplo, se você navegar por 4 vezes em produtos masculinos e 6 em produtos femininos, será exibido um banner com promoção para calçados femininos. Mas fique atento, pois o banner deverá mudar conforme sua navegação.</p>
 		<p>Lembre-se que esse é apenas um exemplo de utilização do OneTarget. Para mais detalhes não deixe de preencher nosso formulário em <em>OneTarget.com.br</em>.</p>
-		<a id="btn-iniciar" href="#" class="fancy_button wide">Iniciar</a>
+		<a id="btn-iniciar" href="#" class="fancy_button wide simplemodal-close">Iniciar</a>
 	</div>
 
 	<script type="text/javascript" src="js/jquery.1.8.2.min.js"></script>
@@ -90,8 +92,8 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#modal-intro").modal();
-			$('#btn-iniciar').on('click',function(){
-				$.modal.close();
+			$("#btn-help").on('click', function(){
+				$("#modal-intro").modal();
 			});
 		});
 	</script>
