@@ -7,7 +7,7 @@
 
   </head>
   <body class="cl_exemplo-index">
-    <script type="text/javascript" src="js/ot-min-exemplo-onetarget.js"></script>
+    <script type="text/javascript" src="js/ot-min-exemplo-onetarget.js" async="async"></script>
 
     <div id="top-bar"/>
     <div id="main" class="wrapper">
@@ -103,6 +103,7 @@
 
 		OT.api.whenReady(popularBanner);
 		function popularBanner() {
+		  setTimeout(null,3000);
 			if(OT.api.getRule(0)){
 				$('#ad-area').html('<img src="images/ad/banner-'+ OT.api.getRule(0) +'.gif" width="940px"></img>');
 			} else {
