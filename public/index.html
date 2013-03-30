@@ -100,12 +100,11 @@
 	</script>
 
 	<script type="text/javascript"> 
-
 		OT.api.whenReady(popularBanner);
 		function popularBanner() {
 		  setTimeout(null,3000);
-			if(OT.api.getRule(0)){
-				$('#ad-area').html('<img src="images/ad/banner-'+ OT.api.getRule(0) +'.gif" width="940px"></img>');
+			if(OT.api.getRuleByCategoryGroup("Ranking Total").length>0){
+				$('#ad-area').html('<img src="images/ad/banner-'+ OT.api.getRuleByCategoryGroup("Ranking Total")[0] +'.gif" width="940px"></img>');
 			} else {
 				$('#ad-area').html('<img src="images/ad/banner-g.gif" width="940px"></img>');
 				$("#modal-intro").modal();
