@@ -72,13 +72,13 @@
 				<p>R$ 135,00</p>
 			    <a href="index.html?cl=m" class="fancy_button">Mais info.</a>
 			  </div>
-			</div>			
+			</div>
 		</div>
-		
+
 	  </div>
     </div>
 	<div id="footer" />
-	
+
 	<div id="modal-intro" style="display:none">
 		<h1>Site de exemplo do OneTarget</h1>
 		<p>Nesse exemplo mostraremos um banner no topo da página baseado no ranking de sua navegação pelos calçados femininos e masculinos.</p>
@@ -99,12 +99,13 @@
 		});
 	</script>
 
-	<script type="text/javascript"> 
+	<script type="text/javascript">
+		OT.api.getRanking("GENERO");
 		OT.api.whenReady(popularBanner);
 		function popularBanner() {
 		  setTimeout(null,3000);
-			if(OT.api.getRuleByCategoryGroup("Ranking Total").length>0){
-				$('#ad-area').html('<img src="images/ad/banner-'+ OT.api.getRuleByCategoryGroup("Ranking Total")[0] +'.gif" width="940px"></img>');
+			if(OT.api.ranking().length>0){
+				$('#ad-area').html('<img src="images/ad/banner-'+ OT.api.ranking()[0] +'.gif" width="940px"></img>');
 			} else {
 				$('#ad-area').html('<img src="images/ad/banner-g.gif" width="940px"></img>');
 				$("#modal-intro").modal();
