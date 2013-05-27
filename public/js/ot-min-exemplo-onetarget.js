@@ -3,8 +3,8 @@ OT.api = OT.api || {};
 (function(){
   var otg = {
     icS: '1.1.21',
-    urlEvent: 'http://exemplo.onetarget.com.br/v1/events?',
-    urlRanking: 'http://exemplo.onetarget.com.br/v1/rules/:id/ranking'
+    urlEvent: 'http://api.exemplo.onetarget.com.br/v1/events?',
+    urlRanking: 'http://api.exemplo.onetarget.com.br/v1/rules/:id/ranking'
   };
   ranking = undefined;
 
